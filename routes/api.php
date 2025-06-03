@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DocController;
 
 require __DIR__ . '/api/v1.php';
 require __DIR__ . '/api/v2.php';
@@ -15,3 +16,5 @@ Route::prefix('auth')->group(function () {
     Route::post('/logout', App\Http\Controllers\Api\Auth\LogoutController::class);
     Route::post('/register', App\Http\Controllers\Api\Auth\RegisterController::class);
 });
+
+// Route::apiResource('docs', DocController::class);
